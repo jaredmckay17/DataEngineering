@@ -2,6 +2,8 @@
 # Introduction - utilizing Juypter Notebook for analysis on batch procesing in Pandas
 
 import pandas as pd
+
+
 pd.options.display.max_columns = 99
 chunk_iter = pd.read_csv('crunchbase-investments.csv', chunksize=5000, encoding='ISO-8859-1')
 
