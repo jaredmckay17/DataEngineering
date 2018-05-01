@@ -7,7 +7,6 @@ chunk_iter = pd.read_csv('crunchbase-investments.csv', chunksize=5000, encoding=
 
 # Compute each column's missing value counts
 
-In [32]:
 mv_list = []
 for chunk in chunk_iter:
     mv_list.append(chunk.isnull().sum())
@@ -42,7 +41,6 @@ dtype: int64
 
 #Total memory footprint for each column
 
-In [27]:
 chunk_iter = pd.read_csv('crunchbase-investments.csv', chunksize=5000, encoding='ISO-8859-1')
 counter = 0
 series_memory_fp = pd.Series()
@@ -123,9 +121,6 @@ Index(['company_name', 'company_category_code', 'company_country_code',
        'funded_quarter', 'funded_year', 'raised_amount_usd'],
       dtype='object')
 
-Selecting Data Types
-
-In [76]:
 # Key: Column name, Value: List of types
 col_types = {}
 chunk_iter = pd.read_csv('crunchbase-investments.csv', chunksize=5000, encoding='ISO-8859-1', usecols=keep_cols)
